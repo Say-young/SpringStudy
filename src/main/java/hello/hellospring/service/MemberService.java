@@ -3,17 +3,21 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 
 //service는 business쪽 용어를 사용해야 기능이랑 mapping이 쉬움
+
+//@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    //외부에서 넣어주도록
+    //@Autowired    외부에서 넣어주도록
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
